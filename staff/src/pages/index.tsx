@@ -3,6 +3,7 @@ import { showNotification } from '@mantine/notifications'
 import { useCallback, useState } from 'react';
 import { api } from '@khe~/api/trpc'
 import { TestWidget } from '@khe~/app/widgets/test';
+import DateTimeTest from '../widgets/timepicker';
 
 
 const useStyles = createStyles(theme => ({
@@ -40,5 +41,6 @@ export default function Homepage() {
         <Button onClick={() => toggleColorScheme()}>{colorScheme}</Button>
         <br /><br />
         <TestWidget />
+        <DateTimeTest />
     </Container>
 }
