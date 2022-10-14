@@ -76,11 +76,6 @@ This exposes the following endpoints:
 - http://staff.localhost:5000
 - http://localhost:5002 *(do not use)*
 
-```bash
-# Start the API
-yarn start --filter=api
-```
-
 ### Building for Production
 
 Development mode provides hot reloading and various other benefits; but these slow down the performance of the entire project.
@@ -114,6 +109,12 @@ yarn dev --filter=api
 ```bash
 # Build the API and the Frontend APP
 yarn build --filter=api --filter=app
+```
+
+
+```bash
+# Start the API
+yarn start --filter=api
 ```
 
 ## Deployment
