@@ -64,9 +64,9 @@
     to-fast-properties "^2.0.0"
 
 "@cseitz/exports@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@cseitz/exports/-/exports-1.0.8.tgz#76daddd3536415f3b80450319dac451731fd2f70"
-  integrity sha512-HQpzDquB4UBjODpTQlJoRoq+WKDqzR/+4kkfI0n9WxOlMomBAvVDGUGN6n5vMr6bo8LIKVwK4XGVsuRoVke2vg==
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@cseitz/exports/-/exports-1.0.10.tgz#d510b3ac655c61aeddcce25635b26d1533b7b11c"
+  integrity sha512-LctHj4YtnhIiUTnj8YnhAI2Zjl+FGaa1tLV/dCuaeOOiCI6sZKdLCZ3E0FYrg4CyZcZdkpTrgLpZ2h7ARs0XnA==
   dependencies:
     "@types/lodash" "^4.14.182"
     chalk "^4.0.0"
