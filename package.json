@@ -10,9 +10,9 @@
     "app"
   ],
   "scripts": {
-    "dev": "FORCE_COLOR=1 turbo run dev --parallel",
-    "start": "FORCE_COLOR=1 turbo run start --parallel",
-    "production": "FORCE_COLOR=1 turbo run production --parallel",
+    "dev": "turbo run dev --parallel",
+    "start": "turbo run start --parallel",
+    "production": "turbo run production --parallel",
     "build": "turbo run build",
     "deploy": "turbo run deploy",
     "exports": "exports"
