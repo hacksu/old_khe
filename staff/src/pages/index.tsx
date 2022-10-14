@@ -27,7 +27,7 @@ export default function Homepage() {
     }
     const ping = api.ping.useQuery();
     return <Container>
-        <Title>hmmm</Title>
+        <Title>Staff</Title>
         <Text>woah</Text>
         <Button onClick={() => notify()}>heya</Button>
         <Box>yooo, {ping.data?.toLocaleString()}</Box>
