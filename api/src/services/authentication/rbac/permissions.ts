@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-constraint */
 import { DeepPartial, LiteralUnion, DeepMap, Merge } from 'react-hook-form';
 import { UserData } from '../../../models/user';
 import { merge, get } from 'lodash';

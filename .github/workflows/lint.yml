@@ -1,0 +1,33 @@
+name: Lint
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore:
+      - "main"
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    concurrency:
+      group: lint
+      cancel-in-progress: true
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'yarn'
+      - name: Installing Dependencies
+        run: yarn install --frozen-lockfile --prefer-offline
+      - name: Linting - API
+        run: yarn lint --filter=api
+      - name: Linting - Staff
+        run: yarn lint --filter=staff
+      - name: Linting - App
+        run: yarn lint --filter=app
+
+    

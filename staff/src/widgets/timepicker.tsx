@@ -79,6 +79,7 @@ function renderPotentialTime() {
 
 }
 
+// eslint-disable-next-line react/display-name
 const TimeAutocompleteItem = forwardRef<HTMLDivElement, SelectableTime & { [key: string]: any }>(
     ({ morning, hours, minutes, text, value, key, ...rest }, ref) => (
         <div ref={ref} key={text} {...rest}>
@@ -92,7 +93,7 @@ function TimePicker() {
     const [value, _setValue] = useState<string>();
     const setValue = useCallback(function (input: string) {
         console.log(value);
-    }, []);
+    }, [value]);
     return <Autocomplete
         label="Only 2 options at a time"
         placeholder="Your favorite framework"

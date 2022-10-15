@@ -55,3 +55,6 @@ export default function Homepage() {
         <pre>{JSON.stringify(tickets.data, null, ' ')}</pre>
     </Container>
 }
+
+// const eey: number = 20;
+// eey = 'woah';
