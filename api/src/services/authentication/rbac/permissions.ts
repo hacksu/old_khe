@@ -2,14 +2,9 @@ import { DeepPartial, LiteralUnion, DeepMap, Merge } from 'react-hook-form';
 import { UserData } from '../../../models/user';
 import { merge, get } from 'lodash';
 import { RegistrationStatus } from '../../../models/registration';
+import { TicketPermissions } from '../../../controllers/tickets/model';
+import { DISABLE_PERMISSIONS } from './config';
 
-
-// TODO: replace with import
-namespace TicketPermissions {
-    export const Read = { tickets: { read: true } } as const;
-    export const Write = { tickets: { write: true, read: true } } as const;
-    export const Delete = { tickets: { delete: true } } as const;
-}
 
 // TODO: replace with import
 namespace UserPermissions {
@@ -114,7 +109,7 @@ function authorize<T extends Permissions>(user: PermissibleUser, permission: T):
 }
 
 export function hasPermission<T extends Permissions>(user: PermissibleUser, permission: T): user is AuthorizedUser<T> {
-    return authorize(user, permission).type === 'ok';
+    return DISABLE_PERMISSIONS || authorize(user, permission).type === 'ok';
 }
 
 // ---------- permission derivation ----------

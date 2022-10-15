@@ -5,6 +5,7 @@ import { Authentication } from '../services/authentication';
 import { transformer } from './transform';
 import camelCase from 'lodash/camelCase';
 import express from 'express';
+import { ticketsRouter } from '../controllers/tickets';
 
 
 /** @export 'trpc/router' */
@@ -12,9 +13,9 @@ import express from 'express';
 /** Router type used in client imports */
 export type Router = typeof router;
 
-/** Import model routers */
-const models = t.router({
-
+/** Import controler routers */
+const controllers = t.router({
+    tickets: ticketsRouter,
 })
 
 /** Import service routers */
@@ -52,7 +53,7 @@ const routes = t.router({
 /** Merge in any routers where other routes are defined */
 export const router = t.mergeRouters(
     routes,
-    models,
+    controllers,
     services
 )
 

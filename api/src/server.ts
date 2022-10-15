@@ -15,6 +15,7 @@ import { createServer } from 'http';
 import { api } from './router';
 import express from 'express';
 import cors from 'cors';
+import './mongo';
 
 
 const port = 5000;

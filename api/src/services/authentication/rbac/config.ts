@@ -3,6 +3,14 @@ import { UserRole } from '../../../models/user';
 import { registerPermisions, Permission, derivePermissions } from './permissions';
 const register = registerPermisions;
 
+
+export const DISABLE_PERMISSIONS = true;
+if (DISABLE_PERMISSIONS) register(user => user.email, () => ({
+    ...Permission.Tickets.All,
+    ...Permission.Users.All,
+}));
+
+
 /** Define permissions for roles
  * - These permissions will be applied to users matching the defined roles
  * @see {@link derivePermissions}
