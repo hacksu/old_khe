@@ -21,7 +21,8 @@
   "devDependencies": {
     "@cseitz/exports": "^1.0.8",
     "cross-env": "^7.0.3",
-    "turbo": "latest"
+    "turbo": "latest",
+    "yarn": "^1.22.19"
   },
   "packageManager": "yarn@1.22.19",
   "engines": {
