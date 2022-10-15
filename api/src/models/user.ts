@@ -14,7 +14,7 @@ export enum UserRole {
 export type UserData = z.infer<typeof userData>;
 export const userData = z.object({
     /** User ID */
-    id: z.string(),
+    _id: z.string(),
     /** User's email */
     email: z.string().email(),
     /** User's password

@@ -12,7 +12,7 @@ export enum TicketStatus {
 export type TicketData = z.infer<typeof ticketData>;
 export const ticketData = z.object({
     /** Ticket ID */
-    id: z.string(),
+    _id: z.string(),
     /** Contact's name */
     name: z.string()
         .min(3, 'Please enter your name!')

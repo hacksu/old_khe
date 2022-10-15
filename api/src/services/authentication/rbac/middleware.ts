@@ -3,6 +3,7 @@ import { TRPCError } from '@trpc/server';
 import { Session } from '../session';
 import { t } from '../../../trpc';
 import { merge } from 'lodash';
+import { DISABLE_PERMISSIONS } from './config';
 
 
 
@@ -19,7 +20,8 @@ export function access<T extends Permissions>(permission: T) {
                 })
             }
         }
-        throw new TRPCError({ code: 'UNAUTHORIZED' });
+        if (DISABLE_PERMISSIONS) return next({ ctx })
+        else throw new TRPCError({ code: 'UNAUTHORIZED' });
     })
 }
 

@@ -3,6 +3,7 @@ import { showNotification } from '@mantine/notifications'
 import { useCallback, useState } from 'react';
 import { api } from '@khe~/api/trpc'
 import { TestWidget } from '@khe~/app/widgets/test';
+import DateTimeTest from '../widgets/timepicker';
 
 
 const useStyles = createStyles(theme => ({
@@ -26,6 +27,8 @@ export default function Homepage() {
         })
     }
     const ping = api.ping.useQuery();
+    const createTicket = api.tickets.create.useMutation().mutate;
+    const tickets = api.tickets.list.useQuery();
     return <Container>
         <Title>Staff</Title>
         <Text>woah</Text>
@@ -40,5 +43,15 @@ export default function Homepage() {
         <Button onClick={() => toggleColorScheme()}>{colorScheme}</Button>
         <br /><br />
         <TestWidget />
+        <DateTimeTest />
+        <Button onClick={() => {
+            createTicket({
+                email: 'cseitz5@kent.edu',
+                name: 'Chris',
+                subject: 'Question',
+                message: 'test test test test',
+            })
+        }}>create ticket</Button>
+        <pre>{JSON.stringify(tickets.data, null, ' ')}</pre>
     </Container>
 }
