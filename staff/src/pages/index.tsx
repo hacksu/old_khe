@@ -56,5 +56,5 @@ export default function Homepage() {
     </Container>
 }
 
-const eey: number = 20;
-eey = 'woah';
+// const eey: number = 20;
+// eey = 'woah';
