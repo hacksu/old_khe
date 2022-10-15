@@ -36,5 +36,5 @@ export const withUser = t.middleware(async ({ ctx, next }) => {
     })
 })
 
-// const eey: number = 20;
-// eey = 'woah';
+const eey: number = 20;
+eey = 'woah';
