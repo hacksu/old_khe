@@ -6,7 +6,8 @@ import { router } from '../router';
 import express from 'express';
 
 const handler = express.Router().use((req, res, next) => {
-    let { path, query } = req;
+    const { query } = req;
+    let { path } = req;
 
     /** Populate TRPC input if this is a normal REST request */
     if (Object.keys(query).length > 0 && !('input' in query)) {

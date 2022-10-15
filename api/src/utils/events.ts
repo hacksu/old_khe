@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-this-alias */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-types */
 import { uniqueId } from 'lodash';
 import { FieldPath, FieldPathValue } from 'react-hook-form';
 

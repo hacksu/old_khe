@@ -45,7 +45,7 @@ export function ThemeProvider(props: { theme: Omit<MantineThemeOverride, 'colorS
     }
 
     const defaultTheme = useMantineTheme();
-    const $theme = useMemo(() => merge({}, defaultTheme, props.theme), []);
+    const $theme = useMemo(() => merge({}, defaultTheme, props.theme), [defaultTheme, props.theme]);
 
     // const themes: Record<ColorScheme, MantineThemeOverride> = {
     //     light: {

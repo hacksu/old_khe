@@ -10,15 +10,17 @@
     "app"
   ],
   "scripts": {
-    "dev": "turbo run dev --parallel",
-    "start": "turbo run start --parallel",
-    "production": "turbo run production --parallel",
-    "build": "turbo run build",
-    "deploy": "turbo run deploy",
+    "dev": "cross-env FORCE_COLOR=1 turbo run dev --parallel",
+    "start": "cross-env FORCE_COLOR=1 turbo run start --parallel",
+    "production": "cross-env FORCE_COLOR=1 turbo run production --parallel",
+    "build": "cross-env FORCE_COLOR=1 turbo run build",
+    "lint": "cross-env FORCE_COLOR=1 turbo run lint",
+    "deploy": "cross-env FORCE_COLOR=1 turbo run deploy",
     "exports": "exports"
   },
   "devDependencies": {
     "@cseitz/exports": "^1.0.8",
+    "cross-env": "^7.0.3",
     "turbo": "latest"
   },
   "packageManager": "yarn@1.22.19",
