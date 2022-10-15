@@ -29,7 +29,5 @@ jobs:
         run: yarn lint --filter=staff
       - name: Linting - App
         run: yarn lint --filter=app
-      - name: Lint Check
-        run: yarn build
 
     

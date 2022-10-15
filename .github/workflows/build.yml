@@ -29,6 +29,4 @@ jobs:
         run: yarn build --filter=staff
       - name: Building - App
         run: yarn build --filter=app
-      - name: Build Check
-        run: yarn build
 
