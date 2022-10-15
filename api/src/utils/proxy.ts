@@ -93,8 +93,8 @@ export function ReverseProxy<C extends Record<string, ProxyConfig>>(props: Proxy
                     setTimeout(() => {
                         handleRequest(req, res as any);
                     }, 1000);
-                    return;
                 }
+                return;
             }
             throw err;
         })
