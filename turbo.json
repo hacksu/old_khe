@@ -10,7 +10,7 @@
             "outputMode": "none"
         },
         "lint": {
-            "cache": false
+            "cache": true
         },
         "deploy": {
             "dependsOn": ["build"]
