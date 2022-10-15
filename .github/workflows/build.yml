@@ -11,7 +11,6 @@ jobs:
       cancel-in-progress: true
 
     steps:
-      - name: Cache Node Modules
       - uses: actions/checkout@v3
       - name: Use Node.js
         uses: actions/setup-node@v3
