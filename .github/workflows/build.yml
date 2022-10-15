@@ -10,17 +10,15 @@ jobs:
       group: lint
       cancel-in-progress: true
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
+      - name: Cache Node Modules
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: yarn install --frozen-lockfile
+          node-version: 16.x
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile --prefer-offline
       - run: yarn lint
       - run: yarn build
 
